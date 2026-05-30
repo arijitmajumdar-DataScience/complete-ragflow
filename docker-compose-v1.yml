@@ -1,0 +1,11 @@
+services:
+  opensearch:
+    image: opensearchproject/opensearch:2.19.0
+    container_name: opensearch-node
+    environment:
+      - discovery.type=single-node
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=ItsNotWeakPassword@768910
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+      - "9600:9600"
