@@ -4,7 +4,7 @@ services:
     container_name: opensearch-node
     environment:
       - discovery.type=single-node
-      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=ItsNotWeakPassword@768910
+      - OPENSEARCH_INITIAL_ADMIN_PASSWORD=<Put your own password>
       - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
     ports:
       - "9200:9200"
